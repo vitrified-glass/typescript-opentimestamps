@@ -3,7 +3,10 @@ updates:
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
-      interval: "daily"
-    open-pull-requests-limit: 20
+      interval: "weekly"
+    open-pull-requests-limit: 5
     rebase-strategy: "auto"
     versioning-strategy: increase
+    groups:
+      dev-dependencies:
+        dependency-type: "development"

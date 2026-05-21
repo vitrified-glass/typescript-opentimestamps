@@ -118,7 +118,7 @@ import { default as _verifiers } from './verifiers';
  *
  * @example
  * ```typescript
- * import { newTree } from '@opentimestamps/typescript-opentimestamps';
+ * import { newTree } from '@vitrified/typescript-opentimestamps';
  *
  * console.log(newTree());
  *   // { edges: EdgeMap {}, leaves: LeafSet {} }
@@ -139,9 +139,9 @@ export const newTree = _newTree;
  *
  * @example
  * ```typescript
- * import type { Timestamp } from '@opentimestamps/typescript-opentimestamps';
+ * import type { Timestamp } from '@vitrified/typescript-opentimestamps';
  *
- * import { info, read } from '@opentimestamps/typescript-opentimestamps';
+ * import { info, read } from '@vitrified/typescript-opentimestamps';
  *
  * const timestamp: Timestamp = read(Uint8Array.of(
  *   0x00, 0x4f, 0x70, 0x65, 0x6e, 0x54, 0x69, 0x6d, 0x65,
@@ -195,7 +195,7 @@ export const info = _info;
  *
  * @example
  * ```typescript
- * import {canShrink, read } from '@opentimestamps/typescript-opentimestamps';
+ * import {canShrink, read } from '@vitrified/typescript-opentimestamps';
  *
  * console.log(canShrink(read(
  *   Uint8Array.of(
@@ -239,7 +239,7 @@ export const canShrink = _canShrink;
  *
  * @example
  * ```typescript
- * import { canUpgrade, read } from '@opentimestamps/typescript-opentimestamps';
+ * import { canUpgrade, read } from '@vitrified/typescript-opentimestamps';
  *
  * console.log(canUpgrade(read(
  *   Uint8Array.of(
@@ -345,7 +345,7 @@ export const canVerify = _canVerify;
  *
  * @example
  * ```typescript
- * import { read } from '@opentimestamps/typescript-opentimestamps';
+ * import { read } from '@vitrified/typescript-opentimestamps';
  *
  * console.log(read(
  *   Uint8Array.of(
@@ -371,7 +371,7 @@ export const canVerify = _canVerify;
  *
  * @example
  * ```typescript
- * import { read } from '@opentimestamps/typescript-opentimestamps';
+ * import { read } from '@vitrified/typescript-opentimestamps';
  *
  * console.log(read(
  *   Uint8Array.of(
@@ -413,9 +413,9 @@ export const read = _read;
  *
  * @example
  * ```typescript
- * import type { Timestamp } from '@opentimestamps/typescript-opentimestamps';
+ * import type { Timestamp } from '@vitrified/typescript-opentimestamps';
  *
- * import { info, read, shrink } from '@opentimestamps/typescript-opentimestamps';
+ * import { info, read, shrink } from '@vitrified/typescript-opentimestamps';
  *
  * const timestamp: Timestamp = read(
  *   Uint8Array.of(
@@ -457,9 +457,9 @@ export const shrink = _shrink;
  *
  * @example
  * ```typescript
- * import type { Timestamp } from '@opentimestamps/typescript-opentimestamps';
+ * import type { Timestamp } from '@vitrified/typescript-opentimestamps';
  *
- * import { info, submit } from '@opentimestamps/typescript-opentimestamps';
+ * import { info, submit } from '@vitrified/typescript-opentimestamps';
  *
  * const { timestamp, errors }: { timestamp: Timestamp; errors: Error[] } = await submit(
  *   'sha1',
@@ -622,7 +622,7 @@ export const upgrade = _upgrade;
  *
  * @example
  * ```typescript
- * import { newTree, is } from '@opentimestamps/typescript-opentimestamps';
+ * import { newTree, is } from '@vitrified/typescript-opentimestamps';
  *
  * console.log(is(123));
  *   // false
@@ -668,7 +668,7 @@ export const is = _is;
  *
  * @example
  * ```typescript
- * import { newTree, assert } from '@opentimestamps/typescript-opentimestamps';
+ * import { newTree, assert } from '@vitrified/typescript-opentimestamps';
  *
  * assert({
  *   version: 1,
@@ -684,7 +684,7 @@ export const is = _is;
  *
  * @example
  * ```typescript
- * import { assert } from '@opentimestamps/typescript-opentimestamps';
+ * import { assert } from '@vitrified/typescript-opentimestamps';
  *
  * assert(123);
  *   // Error: Expected non-null object
@@ -713,7 +713,7 @@ export const assert: (timestamp: unknown) => asserts timestamp is Timestamp = _a
  *
  * @example
  * ```typescript
- * import { newTree, validate } from '@opentimestamps/typescript-opentimestamps';
+ * import { newTree, validate } from '@vitrified/typescript-opentimestamps';
  *
  * console.log(validate(
  *   {
@@ -735,7 +735,7 @@ export const assert: (timestamp: unknown) => asserts timestamp is Timestamp = _a
  *
  * @example
  * ```typescript
- * import { validate } from '@opentimestamps/typescript-opentimestamps';
+ * import { validate } from '@vitrified/typescript-opentimestamps';
  *
  * console.log(validate(123));
  *   // Error: Expected non-null object
@@ -774,7 +774,7 @@ export const validate = _validate;
  *
  * @example
  * ```typescript
- * import { newTree, write } from '@opentimestamps/typescript-opentimestamps';
+ * import { newTree, write } from '@vitrified/typescript-opentimestamps';
  *
  * console.log(write(
  *   {

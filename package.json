@@ -1,22 +1,23 @@
 {
-  "name": "@opentimestamps/typescript-opentimestamps",
-  "version": "0.1.0",
+  "name": "@vitrified/typescript-opentimestamps",
+  "version": "0.2.0",
   "description": "An OpenTimestamps client written in TypeScript",
   "keywords": [
     "OpenTimestamps"
   ],
   "license": "LGPL-3.0-or-later",
-  "homepage": "https://opentimestamps.org/",
+  "homepage": "https://github.com/vitrified-glass/typescript-opentimestamps",
   "bugs": {
-    "url": "https://github.com/opentimestamps/typescript-opentimestamps/issues"
+    "url": "https://github.com/vitrified-glass/typescript-opentimestamps/issues"
   },
-  "repository": "github:opentimestamps/typescript-opentimestamps",
-  "author": {
-    "name": "La Crypta",
-    "url": "https://lacrypta.ar",
-    "email": "info@lacrypta.ar"
-  },
-  "contributors": [],
+  "repository": "github:vitrified-glass/typescript-opentimestamps",
+  "author": "Banche Labs, Inc.",
+  "contributors": [
+    {
+      "name": "La Crypta",
+      "url": "https://lacrypta.ar"
+    }
+  ],
   "files": [
     "dist/types",
     "dist/esm",
@@ -66,7 +67,7 @@
     "reset": "pnpm clean && rm -rf node_modules && rm -f pnpm-lock.yaml"
   },
   "devDependencies": {
-    "@opentimestamps/typescript-opentimestamps": "link:",
+    "@vitrified/typescript-opentimestamps": "link:",
     "@types/jest": "^29.5.14",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
     "@typescript-eslint/parser": "^8.13.0",

@@ -5,6 +5,8 @@ An OpenTimestamps client written in TypeScript
 This project aims to provide a fully-tested, fully typed, OpenTimestamps Client.
 It currently supports stamping, upgrading, and verifying timestamps.
 
+Based on work by [La Crypta](https://lacrypta.ar) originally at [`opentimestamps/typescript-opentimestamps`](https://github.com/opentimestamps/typescript-opentimestamps).
+
 ## Table of Contents
 
 1. [Table of Contents](#table-of-contents)
@@ -27,15 +29,15 @@ The project may be used as-is in Typescript directly, or it may be compiled and 
 Installing the library is straightforward:
 
 ```sh
-npm add @opentimestamps/typescript-opentimestamps
+npm add @vitrified/typescript-opentimestamps
 ```
 
 ```sh
-yarn add @opentimestamps/typescript-opentimestamps
+yarn add @vitrified/typescript-opentimestamps
 ```
 
 ```sh
-pnpm add @opentimestamps/typescript-opentimestamps
+pnpm add @vitrified/typescript-opentimestamps
 ```
 
 The only run-time dependency is [`@noble/hashes`](https://github.com/paulmillr/noble-hashes).
@@ -51,7 +53,7 @@ import {
   verify as verify,
   //
   verifiers,
-} from '@opentimestamps/typescript-opentimestamps';
+} from '@vitrified/typescript-opentimestamps';
 
 type VerificationResult = {
   attestations: Record<number, string[]>;
@@ -111,7 +113,7 @@ This project uses [`pnpm`](https://pnpm.io/) (think `npm` but faster), you'll ne
 You may clone the repository as usual:
 
 ```sh
-git clone git@github.com:opentimestamps/typescript-opentimestamps.git
+git clone git@github.com:vitrified-glass/typescript-opentimestamps.git
 cd typescript-opentimestamps
 ```
 
@@ -140,7 +142,7 @@ pnpm doc
 
 Now navigate to `/dist/docs/api/index.html` (for the end-use documentation) or `/dist/docs/internal/index.html` (for developer documentation) and peruse the generated documentation at your leisure.
 
-Please follow contribution guidelines at [the GitHub repository](https://github.com/opentimestamps/typescript-opentimestamps), we encourage PRs!
+Please follow contribution guidelines at [the GitHub repository](https://github.com/vitrified-glass/typescript-opentimestamps), we encourage PRs!
 
 ## License
 
