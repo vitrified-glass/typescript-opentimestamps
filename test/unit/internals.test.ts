@@ -14,8 +14,8 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import type { Edge, Ops, Paths } from '../../src/internals';
-import type { Leaf, Op, Tree } from '../../src/types';
+import type { Edge, Ops, Paths } from '../../src/internals.js';
+import type { Leaf, Op, Tree } from '../../src/types.js';
 
 import {
   callOp,
@@ -34,10 +34,10 @@ import {
   LeafHeader,
   LeafSet,
   Tag,
-} from '../../src/internals';
-import { uint8ArrayToHex } from '../../src/utils';
+} from '../../src/internals.js';
+import { uint8ArrayToHex } from '../../src/utils.js';
 
-import { treeToString } from '../helpers';
+import { treeToString } from '../helpers.js';
 
 describe('Internals', (): void => {
   describe('Tag', (): void => {

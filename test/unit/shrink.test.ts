@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import type { Timestamp } from '../../src/types';
+import type { Timestamp } from '../../src/types.js';
 
-import { EdgeMap, LeafSet } from '../../src/internals';
-import { shrink } from '../../src/shrink';
-import { uint8ArrayFromHex } from '../../src/utils';
+import { EdgeMap, LeafSet } from '../../src/internals.js';
+import { shrink } from '../../src/shrink.js';
+import { uint8ArrayFromHex } from '../../src/utils.js';
 
-import { timestampToString } from '../helpers';
+import { timestampToString } from '../helpers.js';
 
 describe('Shrink', (): void => {
   describe('shrink()', (): void => {

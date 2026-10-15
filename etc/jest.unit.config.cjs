@@ -7,6 +7,9 @@ module.exports = {
   coverageDirectory: '<rootDir>/dist/.coverage/unit',
   coverageProvider: 'babel',
   logHeapUsage: true,
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
   passWithNoTests: true,
   preset: 'ts-jest',
   randomize: true,

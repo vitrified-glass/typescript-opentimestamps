@@ -28,7 +28,7 @@ import {
   uint8ArrayReversed,
   uint8ArrayToBase64,
   uint8ArrayToHex,
-} from '../../src/utils';
+} from '../../src/utils.js';
 
 const textEncoder: TextEncoder = new TextEncoder();
 

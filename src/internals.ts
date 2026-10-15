@@ -26,9 +26,9 @@ import { sha1 } from '@noble/hashes/sha1';
 import { sha256 } from '@noble/hashes/sha256';
 import { keccak_256 } from '@noble/hashes/sha3';
 
-import type { Leaf, MergeMap, MergeSet, Op, Tree } from './types';
+import type { Leaf, MergeMap, MergeSet, Op, Tree } from './types.js';
 
-import { textEncoder, uint8ArrayCompare, uint8ArrayFromHex, uint8ArrayReversed, uint8ArrayToHex } from './utils';
+import { textEncoder, uint8ArrayCompare, uint8ArrayFromHex, uint8ArrayReversed, uint8ArrayToHex } from './utils.js';
 
 /**
  * A simple type alias to refer to a list of {@link Op | operations}.

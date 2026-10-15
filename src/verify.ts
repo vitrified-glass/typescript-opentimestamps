@@ -21,10 +21,10 @@
  * @module
  */
 
-import type { Path } from './internals';
-import type { Leaf, Timestamp, Verifier } from './types';
+import type { Path } from './internals.js';
+import type { Leaf, Timestamp, Verifier } from './types.js';
 
-import { callOps, treeToPaths } from './internals';
+import { callOps, treeToPaths } from './internals.js';
 
 /**
  * Verify the given {@link Timestamp} with the given {@link Verifier | Verifiers}.

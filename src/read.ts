@@ -138,12 +138,12 @@
  * @module
  */
 
-import type { Edge } from './internals';
-import type { FileHash, Leaf, Timestamp, Tree } from './types';
+import type { Edge } from './internals.js';
+import type { FileHash, Leaf, Timestamp, Tree } from './types.js';
 
-import { incorporateToTree, magicHeader, newTree, nonFinal, Tag } from './internals';
-import { textDecoder, uint8ArrayEquals, uint8ArrayToHex } from './utils';
-import { validateCalendarUrl } from './validation';
+import { incorporateToTree, magicHeader, newTree, nonFinal, Tag } from './internals.js';
+import { textDecoder, uint8ArrayEquals, uint8ArrayToHex } from './utils.js';
+import { validateCalendarUrl } from './validation.js';
 
 /**
  * Extract the given number of bytes, from the given position onwards, from the given data substrate.

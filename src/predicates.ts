@@ -21,10 +21,10 @@
  * @module
  */
 
-import type { Path, Paths } from './internals';
-import type { Timestamp, Leaf } from './types';
+import type { Path, Paths } from './internals.js';
+import type { Timestamp, Leaf } from './types.js';
 
-import { treeToPaths } from './internals';
+import { treeToPaths } from './internals.js';
 
 /**
  * Determine whether the given {@link Timestamp} can be shrunk on the given chain.

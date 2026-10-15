@@ -21,7 +21,7 @@
  * @module
  */
 
-import type { Leaf, Verifier } from '../types';
+import type { Leaf, Verifier } from '../types.js';
 
 import {
   fetchBody,
@@ -30,7 +30,7 @@ import {
   uint8ArrayFromHex,
   uint8ArrayReversed,
   uint8ArrayToHex,
-} from '../utils';
+} from '../utils.js';
 
 /**
  * Call [Blockchain.info](https://blockchain.info)'s API to verify the given {@link Leaf}.

@@ -23,11 +23,11 @@
  * @module
  */
 
-import type { Edge } from './internals';
-import type { FileHash, Leaf, Timestamp, Tree } from './types';
+import type { Edge } from './internals.js';
+import type { FileHash, Leaf, Timestamp, Tree } from './types.js';
 
-import { compareEdges, compareLeaves, magicHeader, nonFinal, LeafHeader, Tag } from './internals';
-import { textEncoder, uint8ArrayConcat, uint8ArrayFromHex } from './utils';
+import { compareEdges, compareLeaves, magicHeader, nonFinal, LeafHeader, Tag } from './internals.js';
+import { textEncoder, uint8ArrayConcat, uint8ArrayFromHex } from './utils.js';
 
 /**
  * Write a multi-byte unsigned integer.

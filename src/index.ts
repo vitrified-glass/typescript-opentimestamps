@@ -96,22 +96,22 @@
  * @module typescript-opentimestamps
  */
 
-import type { Timestamp } from './types';
+import type { Timestamp } from './types.js';
 
-export type { FileHash, Leaf, MergeMap, MergeSet, Op, Timestamp, Tree, Verifier } from './types';
+export type { FileHash, Leaf, MergeMap, MergeSet, Op, Timestamp, Tree, Verifier } from './types.js';
 
-import { info as _info } from './info';
-import { newTree as _newTree } from './internals';
-import { canShrink as _canShrink, canUpgrade as _canUpgrade, canVerify as _canVerify } from './predicates';
-import { read as _read } from './read';
-import { shrink as _shrink } from './shrink';
-import { submit as _submit } from './submit';
-import { upgrade as _upgrade } from './upgrade';
-import { assert as _assert, is as _is, validate as _validate } from './validation';
-import { write as _write } from './write';
+import { info as _info } from './info.js';
+import { newTree as _newTree } from './internals.js';
+import { canShrink as _canShrink, canUpgrade as _canUpgrade, canVerify as _canVerify } from './predicates.js';
+import { read as _read } from './read.js';
+import { shrink as _shrink } from './shrink.js';
+import { submit as _submit } from './submit.js';
+import { upgrade as _upgrade } from './upgrade.js';
+import { assert as _assert, is as _is, validate as _validate } from './validation.js';
+import { write as _write } from './write.js';
 
-import { verify as _verify } from './verify';
-import { default as _verifiers } from './verifiers';
+import { verify as _verify } from './verify.js';
+import { default as _verifiers } from './verifiers/index.js';
 
 /**
  * Construct an empty {@link Tree}.
