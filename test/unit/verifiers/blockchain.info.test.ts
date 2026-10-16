@@ -14,10 +14,10 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import type { Leaf } from '../../../src/types';
+import type { Leaf } from '../../../src/types.js';
 
-import { uint8ArrayFromHex, uint8ArrayReversed } from '../../../src/utils';
-import { default as verify } from '../../../src/verifiers/blockchain.info';
+import { uint8ArrayFromHex, uint8ArrayReversed } from '../../../src/utils.js';
+import { default as verify } from '../../../src/verifiers/blockchain.info.js';
 
 const textEncoder: TextEncoder = new TextEncoder();
 

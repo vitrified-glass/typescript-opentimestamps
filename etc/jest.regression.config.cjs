@@ -3,6 +3,9 @@ module.exports = {
   clearMocks: true,
   collectCoverage: false,
   logHeapUsage: true,
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
   passWithNoTests: true,
   preset: 'ts-jest',
   randomize: true,

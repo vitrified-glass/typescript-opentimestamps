@@ -21,9 +21,9 @@
  * @module
  */
 
-import type { FileHash, Leaf, Op, Timestamp, Tree } from './types';
+import type { FileHash, Leaf, Op, Timestamp, Tree } from './types.js';
 
-import { EdgeMap, LeafSet } from './internals';
+import { EdgeMap, LeafSet } from './internals.js';
 
 /**
  * Validate that the given datum is a non-`null` object.

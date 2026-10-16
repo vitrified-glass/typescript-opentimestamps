@@ -24,12 +24,12 @@
 import { sha256 } from '@noble/hashes/sha256';
 import { randomBytes } from '@noble/hashes/utils';
 
-import type { FileHash, Timestamp, Tree } from './types';
+import type { FileHash, Timestamp, Tree } from './types.js';
 
-import { incorporateTreeToTree, newTree, EdgeMap, LeafSet } from './internals';
-import { readTree } from './read';
-import { retrievePostBody } from './utils';
-import { validateCalendarUrl, validateFileHashValue } from './validation';
+import { incorporateTreeToTree, newTree, EdgeMap, LeafSet } from './internals.js';
+import { readTree } from './read.js';
+import { retrievePostBody } from './utils.js';
+import { validateCalendarUrl, validateFileHashValue } from './validation.js';
 
 /**
  * A list of calendar {@link !URL | URLs} to use by default, in case none are provided.

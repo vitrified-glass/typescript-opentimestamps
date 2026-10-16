@@ -14,10 +14,10 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import type { Edge } from '../../src/internals';
-import type { FileHash, Leaf, Timestamp, Tree } from '../../src/types';
+import type { Edge } from '../../src/internals.js';
+import type { FileHash, Leaf, Timestamp, Tree } from '../../src/types.js';
 
-import { EdgeMap, LeafSet } from '../../src/internals';
+import { EdgeMap, LeafSet } from '../../src/internals.js';
 import {
   getByte,
   getBytes,
@@ -33,10 +33,10 @@ import {
   readUint,
   readUrl,
   readVersion,
-} from '../../src/read';
-import { uint8ArrayFromHex } from '../../src/utils';
+} from '../../src/read.js';
+import { uint8ArrayFromHex } from '../../src/utils.js';
 
-import { leafOrEdgeToString, timestampToString, treeToString } from '../helpers';
+import { leafOrEdgeToString, timestampToString, treeToString } from '../helpers.js';
 
 const textEncoder: TextEncoder = new TextEncoder();
 

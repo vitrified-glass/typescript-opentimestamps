@@ -21,12 +21,12 @@
  * @module
  */
 
-import type { Path, Paths } from './internals';
-import type { Leaf, Timestamp, Tree } from './types';
+import type { Path, Paths } from './internals.js';
+import type { Leaf, Timestamp, Tree } from './types.js';
 
-import { callOps, treeToPaths, pathsToTree } from './internals';
-import { readTree } from './read';
-import { retrieveGetBody, uint8ArrayToHex } from './utils';
+import { callOps, treeToPaths, pathsToTree } from './internals.js';
+import { readTree } from './read.js';
+import { retrieveGetBody, uint8ArrayToHex } from './utils.js';
 
 /**
  * Query the given calendar {@link !URL} with the given message in order to get an "absolute" version of the pending {@link types!Leaf | assertion}.

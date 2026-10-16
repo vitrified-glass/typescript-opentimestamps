@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import type { Timestamp } from '../../src/types';
-import type { Path } from '../../src/internals';
+import type { Timestamp } from '../../src/types.js';
+import type { Path } from '../../src/internals.js';
 
-import { callOps, treeToPaths } from '../../src/internals';
-import { read } from '../../src/read';
-import { uint8ArrayConcat, uint8ArrayFromBase64, uint8ArrayFromHex } from '../../src/utils';
-import { writeLeaf } from '../../src/write';
+import { callOps, treeToPaths } from '../../src/internals.js';
+import { read } from '../../src/read.js';
+import { uint8ArrayConcat, uint8ArrayFromBase64, uint8ArrayFromHex } from '../../src/utils.js';
+import { writeLeaf } from '../../src/write.js';
 
 describe('javascript-opentimestamps', (): void => {
   it.each([

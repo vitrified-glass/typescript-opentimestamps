@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import type { Timestamp } from '../../src/types';
+import type { Timestamp } from '../../src/types.js';
 
-import { newTree, EdgeMap, LeafSet } from '../../src/internals';
-import { defaultCalendarUrls, submit } from '../../src/submit';
-import { uint8ArrayFromHex } from '../../src/utils';
+import { newTree, EdgeMap, LeafSet } from '../../src/internals.js';
+import { defaultCalendarUrls, submit } from '../../src/submit.js';
+import { uint8ArrayFromHex } from '../../src/utils.js';
 
-import { timestampToString } from '../helpers';
+import { timestampToString } from '../helpers.js';
 
 describe('Submit', (): void => {
   describe('defaultCalendarUrls', (): void => {

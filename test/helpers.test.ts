@@ -14,11 +14,11 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import type { Edge } from '../src/internals';
-import type { Leaf, Op, Timestamp, Tree } from '../src/types';
+import type { Edge } from '../src/internals.js';
+import type { Leaf, Op, Timestamp, Tree } from '../src/types.js';
 
-import { newTree, EdgeMap, LeafSet } from '../src/internals';
-import { uint8ArrayFromHex } from '../src/utils';
+import { newTree, EdgeMap, LeafSet } from '../src/internals.js';
+import { uint8ArrayFromHex } from '../src/utils.js';
 
 import {
   edgeMapToString,
@@ -29,7 +29,7 @@ import {
   opToString,
   timestampToString,
   treeToString,
-} from './helpers';
+} from './helpers.js';
 
 describe('Helpers', (): void => {
   describe('opToString()', (): void => {

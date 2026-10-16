@@ -21,10 +21,10 @@
  * @module
  */
 
-import type { Path, Paths } from './internals';
-import type { Leaf, Timestamp } from './types';
+import type { Path, Paths } from './internals.js';
+import type { Leaf, Timestamp } from './types.js';
 
-import { pathsToTree, treeToPaths } from './internals';
+import { pathsToTree, treeToPaths } from './internals.js';
 
 /**
  * Shrink the given {@link Timestamp} on the given chain.

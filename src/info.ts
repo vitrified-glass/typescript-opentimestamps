@@ -21,11 +21,11 @@
  * @module
  */
 
-import type { Edge } from './internals';
-import type { FileHash, Leaf, Op, Timestamp, Tree } from './types';
+import type { Edge } from './internals.js';
+import type { FileHash, Leaf, Op, Timestamp, Tree } from './types.js';
 
-import { callOp, compareEdges, compareLeaves } from './internals';
-import { uint8ArrayToHex } from './utils';
+import { callOp, compareEdges, compareLeaves } from './internals.js';
+import { uint8ArrayToHex } from './utils.js';
 
 /**
  * Indent the given string, line by line, prepending the first line with a marker (ie. `" -> "`).

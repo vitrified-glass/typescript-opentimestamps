@@ -21,10 +21,10 @@
  * @module
  */
 
-import type { Verifier } from '../types';
+import type { Verifier } from '../types.js';
 
-import { default as verifyViaBlockchainInfo } from './blockchain.info';
-import { default as verifyViaBlockstream } from './blockstream';
+import { default as verifyViaBlockchainInfo } from './blockchain.info.js';
+import { default as verifyViaBlockstream } from './blockstream.js';
 
 /**
  * A `default` export that simply re-exports all defined {@link Verifier | Verifiers} in the module in a manner suitable for usage with {@link verify!verify | verify}.

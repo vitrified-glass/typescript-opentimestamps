@@ -14,7 +14,7 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import * as index from '../../../src/verifiers';
+import * as index from '../../../src/verifiers/index.js';
 
 describe('Index', (): void => {
   it('should have exports', (): void => {

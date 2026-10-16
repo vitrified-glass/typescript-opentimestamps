@@ -14,13 +14,13 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import type { Timestamp, Tree } from '../../src/types';
+import type { Timestamp, Tree } from '../../src/types.js';
 
-import { EdgeMap, LeafSet } from '../../src/internals';
-import { upgrade, upgradeFromCalendar, upgradeTree } from '../../src/upgrade';
-import { uint8ArrayFromHex } from '../../src/utils';
+import { EdgeMap, LeafSet } from '../../src/internals.js';
+import { upgrade, upgradeFromCalendar, upgradeTree } from '../../src/upgrade.js';
+import { uint8ArrayFromHex } from '../../src/utils.js';
 
-import { timestampToString, treeToString } from '../helpers';
+import { timestampToString, treeToString } from '../helpers.js';
 
 describe('Upgrade', (): void => {
   describe('upgradeFromCalendar()', (): void => {

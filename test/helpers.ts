@@ -14,10 +14,10 @@
 // You should have received a copy of the GNU Lesser General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-import type { Edge, EdgeMap, LeafSet } from '../src/internals';
-import type { Leaf, Op, Timestamp, Tree } from '../src/types';
+import type { Edge, EdgeMap, LeafSet } from '../src/internals.js';
+import type { Leaf, Op, Timestamp, Tree } from '../src/types.js';
 
-import { uint8ArrayToHex } from '../src/utils';
+import { uint8ArrayToHex } from '../src/utils.js';
 
 export function opToString(op: Op): string {
   switch (op.type) {
