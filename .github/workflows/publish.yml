@@ -21,6 +21,11 @@ jobs:
           node-version: "24"
           registry-url: "https://registry.npmjs.org"
 
+      # `npm stage publish` needs npm >= 11.15; pin it rather than rely on the
+      # npm bundled with whichever Node 24 the runner resolves.
+      - name: Pin npm
+        run: npm install --global npm@11.19.1
+
       - uses: pnpm/action-setup@v4
         with:
           version: 11
@@ -43,5 +48,7 @@ jobs:
       - name: Build
         run: pnpm build
 
-      - name: Publish
-        run: pnpm publish --access public --no-git-checks --provenance
+      # Stage only: the version goes live when a maintainer approves it with 2FA
+      # (`npm stage approve <stage-id>` or the package's Staged Packages tab).
+      - name: Stage publish
+        run: npm stage publish . --access public --provenance
