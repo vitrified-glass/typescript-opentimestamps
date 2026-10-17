@@ -28,6 +28,12 @@ const results = await Promise.all([
     outfile: './dist/esm/index.js',
     packages: 'external',
   }),
+  build({
+    ...buildOptions,
+    format: 'cjs',
+    outfile: './dist/cjs/index.cjs',
+    packages: 'external',
+  }),
   //
   build({
     ...buildOptions,

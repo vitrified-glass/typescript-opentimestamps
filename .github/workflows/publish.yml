@@ -48,6 +48,9 @@ jobs:
       - name: Build
         run: pnpm build
 
+      - name: Package check
+        run: pnpm lint:package
+
       # Stage only: the version goes live when a maintainer approves it with 2FA
       # (`npm stage approve <stage-id>` or the package's Staged Packages tab).
       - name: Stage publish

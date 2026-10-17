@@ -1,6 +1,6 @@
 {
   "name": "@vitrified/typescript-opentimestamps",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "An OpenTimestamps client written in TypeScript",
   "keywords": [
     "OpenTimestamps"
@@ -21,6 +21,7 @@
   "files": [
     "dist/types",
     "dist/esm",
+    "dist/cjs",
     "dist/umd"
   ],
   "types": "./dist/types/index.d.ts",
@@ -35,26 +36,32 @@
   "unpkg": "./dist/umd/index.min.js",
   "jsdelivr": "./dist/umd/index.min.js",
   "exports": {
-    "types": "./dist/types/index.d.ts",
     "umd": "./dist/umd/index.js",
-    "require": "./dist/cjs/index.cjs",
+    "import": {
+      "types": "./dist/types/index.d.ts",
+      "default": "./dist/esm/index.js"
+    },
+    "require": {
+      "types": "./dist/cjs/index.d.cts",
+      "default": "./dist/cjs/index.cjs"
+    },
     "default": "./dist/esm/index.js"
   },
   "sideEffects": false,
   "type": "module",
   "scripts": {
     "prepare": "husky",
-    "postinstall": "mkdir -p ./dist/cjs && ln -sf ../umd/index.min.js ./dist/cjs/index.min.cjs && ln -sf ../umd/index.js ./dist/cjs/index.cjs",
     "mdlint": "markdownlint . .github -i node_modules -c ./etc/.markdownlint.jsonc",
     "mdlint:fix": "pnpm run mdlint --fix",
     "lint": "eslint src test --config ./etc/eslint.config.js --no-error-on-unmatched-pattern",
     "lint:fix": "pnpm run lint --fix",
+    "lint:package": "attw --pack . && node -e \"if (typeof require('@vitrified/typescript-opentimestamps').read !== 'function') process.exit(1)\"",
     "prettier": "prettier etc src test --config ./etc/.prettierrc.json --no-error-on-unmatched-pattern --check",
     "prettier:fix": "pnpm run prettier --write",
     "format": "pnpm run prettier:fix && pnpm run lint:fix && pnpm run mdlint:fix",
     "build": "pnpm run build:code && pnpm run build:types",
-    "build:code": "node ./etc/build && pnpm run postinstall",
-    "build:types": "tsc --build --verbose ./etc/tsconfig.build.json",
+    "build:code": "node ./etc/build",
+    "build:types": "tsc --build --verbose ./etc/tsconfig.build.json && node ./etc/build-cjs-types",
     "analyze": "node ./etc/analyze",
     "doc": "pnpm doc:api && pnpm run doc:internal",
     "doc:api": "typedoc --options ./etc/typedoc.api.json",
@@ -67,10 +74,11 @@
     "reset": "pnpm clean && rm -rf node_modules && rm -f pnpm-lock.yaml"
   },
   "devDependencies": {
-    "@vitrified/typescript-opentimestamps": "link:",
+    "@arethetypeswrong/cli": "^0.18.5",
     "@types/jest": "^29.5.14",
     "@typescript-eslint/eslint-plugin": "^8.13.0",
     "@typescript-eslint/parser": "^8.13.0",
+    "@vitrified/typescript-opentimestamps": "link:",
     "esbuild": "^0.24.0",
     "esbuild-plugin-umd-wrapper": "^3.0.0",
     "eslint": "^9.14.0",
